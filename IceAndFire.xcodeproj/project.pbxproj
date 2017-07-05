@@ -7,14 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C3230E2BF5E5679631D3048A /* Pods_IceAndFire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FD097E1CB8B51784C10EB48 /* Pods_IceAndFire.framework */; };
+		FA344CDE1F0CD191009AFCBB /* IAFBooksDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA344CDD1F0CD191009AFCBB /* IAFBooksDataSource.swift */; };
 		FA5CB7E51F0BB4C90057829E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5CB7E41F0BB4C90057829E /* AppDelegate.swift */; };
 		FA5CB7E71F0BB4C90057829E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5CB7E61F0BB4C90057829E /* ViewController.swift */; };
 		FA5CB7EA1F0BB4C90057829E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA5CB7E81F0BB4C90057829E /* Main.storyboard */; };
 		FA5CB7EC1F0BB4C90057829E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA5CB7EB1F0BB4C90057829E /* Assets.xcassets */; };
 		FA5CB7EF1F0BB4C90057829E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA5CB7ED1F0BB4C90057829E /* LaunchScreen.storyboard */; };
+		FA5CB7F71F0BB5F40057829E /* IceAndFireAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5CB7F61F0BB5F40057829E /* IceAndFireAPI.swift */; };
+		FA5CB7F91F0BBF2B0057829E /* IceAndFireBooksRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5CB7F81F0BBF2B0057829E /* IceAndFireBooksRepository.swift */; };
+		FA5CB7FB1F0BD5730057829E /* IAFBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5CB7FA1F0BD5730057829E /* IAFBook.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5F3C1AA79EE8C35AE29AD8F7 /* Pods-IceAndFire.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IceAndFire.release.xcconfig"; path = "Pods/Target Support Files/Pods-IceAndFire/Pods-IceAndFire.release.xcconfig"; sourceTree = "<group>"; };
+		8FD097E1CB8B51784C10EB48 /* Pods_IceAndFire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IceAndFire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1EBAC1C0A5C4C1C248064DB /* Pods-IceAndFire.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IceAndFire.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IceAndFire/Pods-IceAndFire.debug.xcconfig"; sourceTree = "<group>"; };
+		FA344CDD1F0CD191009AFCBB /* IAFBooksDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAFBooksDataSource.swift; sourceTree = "<group>"; };
 		FA5CB7E11F0BB4C90057829E /* IceAndFire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IceAndFire.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA5CB7E41F0BB4C90057829E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA5CB7E61F0BB4C90057829E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +31,9 @@
 		FA5CB7EB1F0BB4C90057829E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA5CB7EE1F0BB4C90057829E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA5CB7F01F0BB4C90057829E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA5CB7F61F0BB5F40057829E /* IceAndFireAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IceAndFireAPI.swift; sourceTree = "<group>"; };
+		FA5CB7F81F0BBF2B0057829E /* IceAndFireBooksRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IceAndFireBooksRepository.swift; sourceTree = "<group>"; };
+		FA5CB7FA1F0BD5730057829E /* IAFBook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAFBook.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +41,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3230E2BF5E5679631D3048A /* Pods_IceAndFire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8E4FD57102A6E1B4F5350945 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8FD097E1CB8B51784C10EB48 /* Pods_IceAndFire.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		96D3D00473F74A763135F8E7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F1EBAC1C0A5C4C1C248064DB /* Pods-IceAndFire.debug.xcconfig */,
+				5F3C1AA79EE8C35AE29AD8F7 /* Pods-IceAndFire.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		FA5CB7D81F0BB4C90057829E = {
 			isa = PBXGroup;
 			children = (
 				FA5CB7E31F0BB4C90057829E /* IceAndFire */,
 				FA5CB7E21F0BB4C90057829E /* Products */,
+				96D3D00473F74A763135F8E7 /* Pods */,
+				8E4FD57102A6E1B4F5350945 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +88,10 @@
 			children = (
 				FA5CB7E41F0BB4C90057829E /* AppDelegate.swift */,
 				FA5CB7E61F0BB4C90057829E /* ViewController.swift */,
+				FA5CB7F61F0BB5F40057829E /* IceAndFireAPI.swift */,
+				FA5CB7F81F0BBF2B0057829E /* IceAndFireBooksRepository.swift */,
+				FA344CDD1F0CD191009AFCBB /* IAFBooksDataSource.swift */,
+				FA5CB7FA1F0BD5730057829E /* IAFBook.swift */,
 				FA5CB7E81F0BB4C90057829E /* Main.storyboard */,
 				FA5CB7EB1F0BB4C90057829E /* Assets.xcassets */,
 				FA5CB7ED1F0BB4C90057829E /* LaunchScreen.storyboard */,
@@ -71,9 +107,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA5CB7F31F0BB4C90057829E /* Build configuration list for PBXNativeTarget "IceAndFire" */;
 			buildPhases = (
+				E9493685E42224C3CAB32F13 /* [CP] Check Pods Manifest.lock */,
 				FA5CB7DD1F0BB4C90057829E /* Sources */,
 				FA5CB7DE1F0BB4C90057829E /* Frameworks */,
 				FA5CB7DF1F0BB4C90057829E /* Resources */,
+				E683F15E8D0E3E05C5243A85 /* [CP] Embed Pods Frameworks */,
+				AA1329E00E8EC45942CEC0FD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -132,12 +171,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		AA1329E00E8EC45942CEC0FD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IceAndFire/Pods-IceAndFire-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E683F15E8D0E3E05C5243A85 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IceAndFire/Pods-IceAndFire-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E9493685E42224C3CAB32F13 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FA5CB7DD1F0BB4C90057829E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA5CB7F91F0BBF2B0057829E /* IceAndFireBooksRepository.swift in Sources */,
+				FA5CB7F71F0BB5F40057829E /* IceAndFireAPI.swift in Sources */,
+				FA344CDE1F0CD191009AFCBB /* IAFBooksDataSource.swift in Sources */,
 				FA5CB7E71F0BB4C90057829E /* ViewController.swift in Sources */,
+				FA5CB7FB1F0BD5730057829E /* IAFBook.swift in Sources */,
 				FA5CB7E51F0BB4C90057829E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,6 +350,7 @@
 		};
 		FA5CB7F41F0BB4C90057829E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F1EBAC1C0A5C4C1C248064DB /* Pods-IceAndFire.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = HQRF9MSSXU;
@@ -272,6 +364,7 @@
 		};
 		FA5CB7F51F0BB4C90057829E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F3C1AA79EE8C35AE29AD8F7 /* Pods-IceAndFire.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = HQRF9MSSXU;
@@ -302,6 +395,7 @@
 				FA5CB7F51F0BB4C90057829E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
