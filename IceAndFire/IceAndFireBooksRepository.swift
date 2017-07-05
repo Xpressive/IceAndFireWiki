@@ -21,7 +21,7 @@ class IceAndFireBooksRepository {
         self.booksDatasource = datasource
     }
     
-    func getAllBooksFromNetwork(completion: @escaping ([IAFBook]?) -> ()) {
+    func getAllBooksFromNetwork(completion: @escaping ([Book]?) -> ()) {
         provider.request(.books) { [weak self] (result) in
             switch result {
             case .success(let response):

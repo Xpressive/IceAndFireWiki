@@ -10,11 +10,18 @@ import Foundation
 import RealmSwift
 import ObjectMapper
 
-class RealmString : Object {
-    dynamic var stringValue = ""
+protocol Book {
+    var urlString: String {get}
+    var name: String {get}
+    var isbn: String {get}
+    var numberOfPages: Int {get}
+    var publisher: String {get}
+    var country: String {get}
+    var mediaType: String {get}
+    var released: Date {get}
 }
 
-class IAFBook: Object, Mappable {
+class IAFBook: Object, Mappable, Book {
     
     dynamic var urlString = ""
     dynamic var name = ""
