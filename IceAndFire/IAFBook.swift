@@ -21,7 +21,7 @@ protocol Book {
     var released: Date {get}
 }
 
-class IAFBook: Object, Mappable, Book {
+class IAFBook: Object, Book {
     
     dynamic var urlString = ""
     dynamic var name = ""
@@ -32,9 +32,18 @@ class IAFBook: Object, Mappable, Book {
     dynamic var mediaType = ""
     dynamic var released = Date()
     
+    override static func primaryKey() -> String {
+        return "urlString"
+    }
+    
     required convenience init?(map: Map) {
         self.init()
     }
+    
+
+}
+
+extension IAFBook: Mappable {
     
     func mapping(map: Map) {
         urlString       <- map["url"]
@@ -44,7 +53,7 @@ class IAFBook: Object, Mappable, Book {
         publisher       <- map["publisher"]
         country         <- map["country"]
         mediaType       <- map["mediaType"]
-        released        <- map["released"]
+        released        <- (map["released"], CustomDateFormatTransform(formatString: "yyyy-MM-dd'T'HH:mm:ss"))
     }
-    
+
 }
