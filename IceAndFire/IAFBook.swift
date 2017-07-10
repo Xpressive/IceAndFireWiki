@@ -33,14 +33,12 @@ class IAFBook: Object, Book {
     dynamic var released = Date()
     
     override static func primaryKey() -> String {
-        return "urlString"
+        return "isbn"
     }
     
     required convenience init?(map: Map) {
         self.init()
     }
-    
-
 }
 
 extension IAFBook: Mappable {

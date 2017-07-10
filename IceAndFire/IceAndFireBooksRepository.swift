@@ -12,8 +12,8 @@ import Moya_ObjectMapper
 import RealmSwift
 
 class IceAndFireBooksRepository {
-    private let provider: MoyaProvider<IceAndFire>
     
+    private let provider: MoyaProvider<IceAndFire>
     private let booksDatasource: BooksDataSource
     
     init(provider: MoyaProvider<IceAndFire>, datasource: BooksDataSource) {

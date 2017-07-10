@@ -20,8 +20,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let iAFBooksRepository = IceAndFireBooksRepository(provider: iAFProvider, datasource: IAFBooksRealmDataSource())
         
-        if let firstVC = window?.rootViewController as? ViewController {
-            firstVC.iAFBooksRepository = iAFBooksRepository
+        if let navVC = window?.rootViewController as? UINavigationController {
+            if let firstVC = navVC.viewControllers[0] as? BooksTableViewController {
+                firstVC.iAFBooksRepository = iAFBooksRepository
+            }
         }
         
         return true

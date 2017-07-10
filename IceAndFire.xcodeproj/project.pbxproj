@@ -9,8 +9,9 @@
 /* Begin PBXBuildFile section */
 		C3230E2BF5E5679631D3048A /* Pods_IceAndFire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FD097E1CB8B51784C10EB48 /* Pods_IceAndFire.framework */; };
 		FA344CDE1F0CD191009AFCBB /* IAFBooksDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA344CDD1F0CD191009AFCBB /* IAFBooksDataSource.swift */; };
+		FA4D1E741F13CBC30081BAA1 /* DetailCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4D1E731F13CBC30081BAA1 /* DetailCollectionViewController.swift */; };
 		FA5CB7E51F0BB4C90057829E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5CB7E41F0BB4C90057829E /* AppDelegate.swift */; };
-		FA5CB7E71F0BB4C90057829E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5CB7E61F0BB4C90057829E /* ViewController.swift */; };
+		FA5CB7E71F0BB4C90057829E /* BooksTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5CB7E61F0BB4C90057829E /* BooksTableController.swift */; };
 		FA5CB7EA1F0BB4C90057829E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA5CB7E81F0BB4C90057829E /* Main.storyboard */; };
 		FA5CB7EC1F0BB4C90057829E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA5CB7EB1F0BB4C90057829E /* Assets.xcassets */; };
 		FA5CB7EF1F0BB4C90057829E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA5CB7ED1F0BB4C90057829E /* LaunchScreen.storyboard */; };
@@ -24,9 +25,10 @@
 		8FD097E1CB8B51784C10EB48 /* Pods_IceAndFire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IceAndFire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1EBAC1C0A5C4C1C248064DB /* Pods-IceAndFire.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IceAndFire.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IceAndFire/Pods-IceAndFire.debug.xcconfig"; sourceTree = "<group>"; };
 		FA344CDD1F0CD191009AFCBB /* IAFBooksDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAFBooksDataSource.swift; sourceTree = "<group>"; };
+		FA4D1E731F13CBC30081BAA1 /* DetailCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailCollectionViewController.swift; sourceTree = "<group>"; };
 		FA5CB7E11F0BB4C90057829E /* IceAndFire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IceAndFire.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA5CB7E41F0BB4C90057829E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FA5CB7E61F0BB4C90057829E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FA5CB7E61F0BB4C90057829E /* BooksTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksTableController.swift; sourceTree = "<group>"; };
 		FA5CB7E91F0BB4C90057829E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FA5CB7EB1F0BB4C90057829E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA5CB7EE1F0BB4C90057829E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -87,7 +89,8 @@
 			isa = PBXGroup;
 			children = (
 				FA5CB7E41F0BB4C90057829E /* AppDelegate.swift */,
-				FA5CB7E61F0BB4C90057829E /* ViewController.swift */,
+				FA5CB7E61F0BB4C90057829E /* BooksTableController.swift */,
+				FA4D1E731F13CBC30081BAA1 /* DetailCollectionViewController.swift */,
 				FA5CB7F61F0BB5F40057829E /* IceAndFireAPI.swift */,
 				FA5CB7F81F0BBF2B0057829E /* IceAndFireBooksRepository.swift */,
 				FA344CDD1F0CD191009AFCBB /* IAFBooksDataSource.swift */,
@@ -225,9 +228,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA5CB7F91F0BBF2B0057829E /* IceAndFireBooksRepository.swift in Sources */,
+				FA4D1E741F13CBC30081BAA1 /* DetailCollectionViewController.swift in Sources */,
 				FA5CB7F71F0BB5F40057829E /* IceAndFireAPI.swift in Sources */,
 				FA344CDE1F0CD191009AFCBB /* IAFBooksDataSource.swift in Sources */,
-				FA5CB7E71F0BB4C90057829E /* ViewController.swift in Sources */,
+				FA5CB7E71F0BB4C90057829E /* BooksTableController.swift in Sources */,
 				FA5CB7FB1F0BD5730057829E /* IAFBook.swift in Sources */,
 				FA5CB7E51F0BB4C90057829E /* AppDelegate.swift in Sources */,
 			);

@@ -30,7 +30,7 @@ class IAFBooksRealmDataSource: BooksDataSource {
     func saveAll(items: [T]) {
         do {
             try realm.write {
-                realm.add(items)
+                realm.add(items, update: true)
             }
         } catch {}
     }
