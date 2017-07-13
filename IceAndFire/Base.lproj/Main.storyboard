@@ -9,6 +9,59 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Add New Book View Controller-->
+        <scene sceneID="Ujg-4n-AiQ">
+            <objects>
+                <viewController id="gBk-Ad-7Um" customClass="AddNewBookViewController" customModule="IceAndFire" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="POZ-AQ-sw3"/>
+                        <viewControllerLayoutGuide type="bottom" id="kCM-rQ-t6G"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qre-Wy-gVl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a29-fO-OHM">
+                                <rect key="frame" x="87.5" y="318" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="b3F-pO-Xej"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Введите название книги" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yZN-4p-zPs">
+                                <rect key="frame" x="89.5" y="289" width="196" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="a29-fO-OHM" firstAttribute="centerX" secondItem="qre-Wy-gVl" secondAttribute="centerX" id="K03-Km-SgE"/>
+                            <constraint firstItem="a29-fO-OHM" firstAttribute="top" secondItem="yZN-4p-zPs" secondAttribute="bottom" constant="8" id="NpT-PQ-5yv"/>
+                            <constraint firstItem="yZN-4p-zPs" firstAttribute="centerX" secondItem="qre-Wy-gVl" secondAttribute="centerX" id="Xca-Ks-zgI"/>
+                            <constraint firstItem="a29-fO-OHM" firstAttribute="centerY" secondItem="qre-Wy-gVl" secondAttribute="centerY" id="rz9-Nf-ozB"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="WZo-x1-hm3">
+                        <barButtonItem key="leftBarButtonItem" title="Отмена" id="DK9-uh-rnx">
+                            <connections>
+                                <action selector="cancelButtonPressed:" destination="gBk-Ad-7Um" id="tzX-y6-lpf"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Готово" id="wr8-wN-yf7">
+                            <connections>
+                                <action selector="doneButtonPressed:" destination="gBk-Ad-7Um" id="SpQ-Fj-8b7"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dOt-WT-Rv0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2076" y="-601.34932533733138"/>
+        </scene>
         <!--Books Table View Controller-->
         <scene sceneID="HPi-kC-ouk">
             <objects>
@@ -22,7 +75,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UC3-hb-1Ja" id="oAQ-UV-P0O">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -35,7 +88,16 @@
                             <outlet property="delegate" destination="UGk-U7-j1R" id="BeJ-cc-eW5"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="QYP-su-0SH"/>
+                    <navigationItem key="navigationItem" id="QYP-su-0SH">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="vW1-D2-gSB">
+                            <connections>
+                                <action selector="addButtonPressed:" destination="UGk-U7-j1R" id="KnH-fl-bDk"/>
+                                <segue destination="wy4-0D-ZaE" kind="popoverPresentation" popoverAnchorBarButtonItem="vW1-D2-gSB" id="xrC-5s-2Uk">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nIm-dq-bte" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -45,7 +107,7 @@
         <scene sceneID="i2P-1l-QHM">
             <objects>
                 <collectionViewController id="LoN-F8-0DT" customClass="DetailCollectionViewController" customModule="IceAndFire" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="Mu2-hw-Wv2">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Mu2-hw-Wv2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -107,6 +169,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jdc-hQ-VKb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="202.40000000000001" y="82.3088455772114"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="avy-x2-JBd">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wy4-0D-ZaE" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bUv-FB-0C9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="gBk-Ad-7Um" kind="relationship" relationship="rootViewController" id="RvC-LX-kKY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NgJ-vh-w48" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1136.8" y="-601.34932533733138"/>
         </scene>
     </scenes>
 </document>

@@ -17,7 +17,7 @@ class BooksTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        iAFBooksRepository.getAllBooksFromNetwork { (books) in
+        iAFBooksRepository.getAllBooks { (books) in
             if let iAFbooks = books {
                 self.books = iAFbooks
                 DispatchQueue.main.async {
@@ -27,6 +27,10 @@ class BooksTableViewController: UITableViewController {
                 print("Err")
             }
         }
+    }
+    
+    
+    @IBAction func addButtonPressed(_ sender: Any) {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

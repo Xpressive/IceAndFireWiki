@@ -15,28 +15,33 @@ class IceAndFireBooksRepository {
     
     private let provider: MoyaProvider<IceAndFire>
     private let booksDatasource: BooksDataSource
+    private let firstUpload: FirstUpload
     
-    init(provider: MoyaProvider<IceAndFire>, datasource: BooksDataSource) {
+    init(provider: MoyaProvider<IceAndFire>, datasource: BooksDataSource, firstUpload: FirstUpload) {
         self.provider = provider
         self.booksDatasource = datasource
+        self.firstUpload = firstUpload
     }
     
-    func getAllBooksFromNetwork(completion: @escaping ([Book]?) -> ()) {
-        provider.request(.books) { [weak self] (result) in
-            switch result {
-            case .success(let response):
-                do {
-                    let books = try response.mapArray(IAFBook.self)
-                    completion(books)
-                    self?.booksDatasource.saveAll(items: books)
-                } catch {
+    func getAllBooks(completion: @escaping ([Book]?) -> ()) {
+        if firstUpload.isFirstUpload {
+            provider.request(.books) { [weak self] (result) in
+                switch result {
+                case .success(let response):
+                    do {
+                        let books = try response.mapArray(IAFBook.self)
+                        completion(books)
+                        self?.booksDatasource.saveAll(items: books)
+                    } catch {
+                        completion(nil)
+                    }
+                case .failure(let error):
+                    print(error.localizedDescription)
                     completion(nil)
                 }
-            case .failure(let error):
-                print(error.localizedDescription)
-                completion(nil)
-                
             }
+        } else {
+            completion(self.booksDatasource.getAll())
         }
         
     }

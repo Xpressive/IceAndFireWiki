@@ -18,6 +18,8 @@
 		FA5CB7F71F0BB5F40057829E /* IceAndFireAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5CB7F61F0BB5F40057829E /* IceAndFireAPI.swift */; };
 		FA5CB7F91F0BBF2B0057829E /* IceAndFireBooksRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5CB7F81F0BBF2B0057829E /* IceAndFireBooksRepository.swift */; };
 		FA5CB7FB1F0BD5730057829E /* IAFBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5CB7FA1F0BD5730057829E /* IAFBook.swift */; };
+		FAA6ACC31F17B850004D40D8 /* IAFFirstUpload.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA6ACC21F17B850004D40D8 /* IAFFirstUpload.swift */; };
+		FAA6ACC51F17BD66004D40D8 /* AddNewBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA6ACC41F17BD66004D40D8 /* AddNewBookViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		FA5CB7F61F0BB5F40057829E /* IceAndFireAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IceAndFireAPI.swift; sourceTree = "<group>"; };
 		FA5CB7F81F0BBF2B0057829E /* IceAndFireBooksRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IceAndFireBooksRepository.swift; sourceTree = "<group>"; };
 		FA5CB7FA1F0BD5730057829E /* IAFBook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAFBook.swift; sourceTree = "<group>"; };
+		FAA6ACC21F17B850004D40D8 /* IAFFirstUpload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAFFirstUpload.swift; sourceTree = "<group>"; };
+		FAA6ACC41F17BD66004D40D8 /* AddNewBookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewBookViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,9 +95,11 @@
 				FA5CB7E41F0BB4C90057829E /* AppDelegate.swift */,
 				FA5CB7E61F0BB4C90057829E /* BooksTableController.swift */,
 				FA4D1E731F13CBC30081BAA1 /* DetailCollectionViewController.swift */,
+				FAA6ACC41F17BD66004D40D8 /* AddNewBookViewController.swift */,
 				FA5CB7F61F0BB5F40057829E /* IceAndFireAPI.swift */,
 				FA5CB7F81F0BBF2B0057829E /* IceAndFireBooksRepository.swift */,
 				FA344CDD1F0CD191009AFCBB /* IAFBooksDataSource.swift */,
+				FAA6ACC21F17B850004D40D8 /* IAFFirstUpload.swift */,
 				FA5CB7FA1F0BD5730057829E /* IAFBook.swift */,
 				FA5CB7E81F0BB4C90057829E /* Main.storyboard */,
 				FA5CB7EB1F0BB4C90057829E /* Assets.xcassets */,
@@ -234,6 +240,8 @@
 				FA5CB7E71F0BB4C90057829E /* BooksTableController.swift in Sources */,
 				FA5CB7FB1F0BD5730057829E /* IAFBook.swift in Sources */,
 				FA5CB7E51F0BB4C90057829E /* AppDelegate.swift in Sources */,
+				FAA6ACC31F17B850004D40D8 /* IAFFirstUpload.swift in Sources */,
+				FAA6ACC51F17BD66004D40D8 /* AddNewBookViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

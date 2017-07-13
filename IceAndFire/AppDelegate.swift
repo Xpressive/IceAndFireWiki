@@ -18,7 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let iAFProvider = MoyaProvider<IceAndFire>(plugins: [NetworkLoggerPlugin(verbose: true, responseDataFormatter: JSONResponseDataFormatter)])
         
-        let iAFBooksRepository = IceAndFireBooksRepository(provider: iAFProvider, datasource: IAFBooksRealmDataSource())
+        let firstUpload = FirstUpload(userDefaults: UserDefaults.standard, key: "com.AlexeyKuznetsov.IceAndFire")
+        
+        let iAFBooksRepository = IceAndFireBooksRepository(provider: iAFProvider, datasource: IAFBooksRealmDataSource(), firstUpload: firstUpload)
         
         if let navVC = window?.rootViewController as? UINavigationController {
             if let firstVC = navVC.viewControllers[0] as? BooksTableViewController {
